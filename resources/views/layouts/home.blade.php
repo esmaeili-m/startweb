@@ -4,7 +4,7 @@
 
 <body class="bg-gray-100 text-tahiti">
 <livewire:home.configs.header />
-<div class="mx-auto flex max-w-7xl items-center justify-between p-5   lg:px-8 ">
+<div class=" flex  items-center justify-between p-5  mx-auto max-w-7xl lg:px-8 ">
     {{$slot}}
 
 </div>

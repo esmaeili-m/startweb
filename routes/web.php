@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/',\App\Livewire\Home\Index::class)->name('home');
-Route::get('/services',\App\Livewire\Home\Services::class)->name('services');
+Route::get('/services',\App\Livewire\Home\Services::class)->name('services.index');
 Route::get('/services/{slug}',\App\Livewire\Home\ServicesDetails::class)->name('services.details');
 Route::get('/portfolio',\App\Livewire\Home\Services::class)->name('portfolio');
 Route::get('/article',\App\Livewire\Home\Services::class)->name('article');

@@ -19,7 +19,7 @@
                 <div class="hidden lg:flex lg:gap-x-12">
 
                     <a href="{{route('home')}}" class="text-sm/6 font-semibold text-gray-500  {{request()->routeIs('home') ? 'text-orange-600' : 'menu-link'}}">خانه</a>
-                    <a href="{{route('services')}}" class="text-sm/6 font-semibold text-gray-500 {{request()->routeIs('services') ? 'text-orange-600' : 'menu-link'}}">خدمات ما</a>
+                    <a href="{{route('services.index')}}" class="text-sm/6 font-semibold text-gray-500 {{request()->routeIs('services.*') ? 'text-orange-600' : 'menu-link'}}">خدمات ما</a>
                     <a href="{{route('portfolio')}}" class="text-sm/6 font-semibold text-gray-500 {{request()->routeIs('portfolio') ? 'text-orange-600' : 'menu-link'}}">نمونه کار ها</a>
                     <a href="{{route('article')}}" class="text-sm/6 font-semibold text-gray-500 {{request()->routeIs('article') ? 'text-orange-600' : 'menu-link'}}">مقالات</a>
                     <a href="{{route('about')}}" class="text-sm/6 font-semibold text-gray-500 {{request()->routeIs('about') ? 'text-orange-600' : 'menu-link'}}">درباره ما</a>
