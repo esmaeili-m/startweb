@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'IranianSans'; /* نام دلخواه برای فونت */
+    src: url('../fonts/iransans/iransans.ttf') format('truetype'); /* مسیر فایل */
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'IranianSans', sans-serif;
+}
+
+.menu-bg{
+    border-radius: 27px;
+    background: #f6f6f6;
+    box-shadow:  19px 19px 38px #e7e7e7,
+    -19px -19px 38px #ffffff;
+}
+.menu-link:hover{
+    transform: scale(1.2);
+    color: black;
+}
+.menu-link{
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.btn-start{
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid #f6781f;
+    font-size: 13px;
+    color: #f6781f;
+    transition: transform 0.3s ease-in-out, color 0.1s ease-in-out;
+    box-shadow:  4px 4px 7px #ccced1,
+    -4px -4px 7px #feffff;
+}
+.btn-start:hover {
+    background-color: #f6781f;
+    color: white;
+    transform: scale(1.2);
+
+}
+
+.slide-in-text-1{
+    opacity: 0; /* شروع با شفاف بودن */
+    transform: translateX(-100%); /* شروع از خارج صفحه از سمت چپ */
+    animation: slideIn 1s forwards; /* انیمیشن برای حرکت و ظاهر شدن */
+}
+.slide-in-text-2{
+    opacity: 0; /* شروع با شفاف بودن */
+    transform: translateX(-100%); /* شروع از خارج صفحه از سمت چپ */
+    animation: slideIn 2s forwards; /* انیمیشن برای حرکت و ظاهر شدن */
+}
+.slide-in-text-3{
+    opacity: 0; /* شروع با شفاف بودن */
+    transform: translateX(-100%); /* شروع از خارج صفحه از سمت چپ */
+    animation: slideIn 2.3s forwards; /* انیمیشن برای حرکت و ظاهر شدن */
+}
+.slide-in-text-4{
+    opacity: 0; /* شروع با شفاف بودن */
+    transform: translateX(-100%); /* شروع از خارج صفحه از سمت چپ */
+    animation: slideIn 2.9s forwards; /* انیمیشن برای حرکت و ظاهر شدن */
+}
+.slide-out-text-3{
+    opacity: 0; /* شروع با شفاف بودن */
+    transform: translateX(-100%); /* شروع از خارج صفحه از سمت چپ */
+    animation: slideOut 2.3s forwards; /* انیمیشن برای حرکت و ظاهر شدن */
+}
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideOut {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.services{
+    padding: 6px;
+    border: 2px solid orangered;
+    border-radius: 20px;
+    font-size: 12px;
+    color: orangered;
+    font-weight: 800;
+    margin-right: 5px;
+    margin-top: 7px;
+    box-shadow:  3px 3px 8px #b0b2b5,
+    -3px -3px 8px #ffffff;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.services:hover {
+    background-color: orangered;
+    color: white;
+    transform: scale(1.2);
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+.pic-main{
+    width: 100% !important;
+}
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    margin: 15px 5px;
+    outline: none;
+    background: #ededed;
+    box-shadow:  3px 3px 8px #b0b2b5,
+    -3px -3px 8px #ffffff;
+    border-radius: 50%;
+}
+
+.social-link:hover {
+    cursor: pointer;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.slider-card {
+    background: #f3f1f1;
+
+}
+.item-slide {
+    box-shadow:  19px 19px 38px #e7e7e7,
+    -19px -19px 38px #ffffff;
+    transform: translateY(0);
+    will-change: transform;
+
+}
+.slide {
+    border: 2px solid white;
+    box-shadow: rgba(0, 0, 0, 0.24) 5px 3px 8px;
+    cursor: pointer;
+    max-width: 200px;
+    max-height: 100px;
+    overflow: hidden;
+
+}
+
+.all-pic img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top; /* تمرکز روی بالای عکس */
+}
+
+
+.flip-container {
+    perspective: 1200px;
+    height: 560px;
+    display: inline-block;
+    overflow-y: auto;
+    position: relative;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.flip-container img{
+    width: 100%;          /* تصویر تمام عرض را بگیرد */
+    height: auto;         /* نسبت تصویر حفظ شود */
+    display: block;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.flip {
+    transform: rotateY(-90deg); /* چرخش تا نیمه‌ی صفحه */
+}
+.services-us {
+    border-radius: 27px;
+    background: #f6f6f6;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-us::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: -100%;
+    bottom: -100%;
+    border: 1px solid orangered;
+    border-radius: 27px;
+    opacity: 0;
+    transform: scale(1.9);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    pointer-events: none;
+}
+.price{
+    width: 100%;
+    margin: 15px 5px;
+    outline: none;
+    background: #ededed;
+    box-shadow: 3px 3px 8px #b0b2b5, -3px -3px 8px #ffffff;
+}
+.services-us:hover::before {
+    opacity: 1;
+    transform: scale(1);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.fade-in-up {
+    opacity: 0; /* متن ابتدا نامرئی است */
+    transform: translateY(150px); /* متن 20px پایین‌تر قرار می‌گیرد */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* انیمیشن با مدت زمان 1 ثانیه */
+}
+
+.fade-in-up.visible {
+    opacity: 1; /* متن کاملاً ظاهر می‌شود */
+    transform: translateY(0); /* متن به موقعیت اصلی خود بازمی‌گردد */
+}
+.plan-item{
+    border: 1px;
+}
+.card {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+}
